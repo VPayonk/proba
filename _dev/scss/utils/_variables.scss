@@ -1,0 +1,117 @@
+// =============================================================================
+// FONTS
+// =============================================================================
+
+$muli: 'muli',sans-serif;
+
+
+// end FONTS
+
+
+
+
+
+// =============================================================================
+// MEDIA QUERIES BREAKPOINTS
+// =============================================================================
+
+// container
+//$container-padding-xs: 20px;
+//$container-padding-tb: 40px;
+//$container-padding-lp: 10%;
+//$container-padding-lg: 10px;
+
+// breakpoints map
+$breakpoints: (
+    mobile: 320px,
+    tablet: 480px,
+    laptop: 768px,
+    desktop: 960px,
+    container: 1266px,
+);
+
+@function bp($bp) {
+    @return map-get($breakpoints, $bp);
+}
+
+// tablet (min)
+$bp-xs: bp(mobile);
+
+// tablet (min)
+$bp-tb: bp(tablet);
+
+// laptop (min)
+$bp-lp: bp(laptop);
+
+// desktop (min)
+$bp-lg: bp(desktop);
+
+// container (min)
+$bp-cont: bp(container);
+
+
+
+// end MEDIA QUERIES BREAKPOINTS
+
+
+
+
+
+// =============================================================================
+// Z-INDEX
+// =============================================================================
+
+$z-index: (
+    header: 100,
+     main: 70,
+    // footer: 50,
+    modal: 500,
+    nav: 400,
+);
+
+@function z-index($key) {
+    @return map-get($z-index, $key);
+}
+
+// end Z-INDEX
+
+
+
+
+
+// =============================================================================
+// COLOR
+// =============================================================================
+
+$theme-color: (
+    white: #FFFFFF,
+    black: #000000,
+    dark: #002F53,
+    grey: #F1F5F7,
+    text_grey: #9FA0A6,
+    orang: #F47632,
+
+
+
+
+
+        green: #c3e76f,
+        blue: #1a2155,
+
+
+);
+
+@function color($color) {
+    $get-color: map-get($theme-color, $color);
+    @return $get-color;
+}
+
+
+
+// end COLOR
+
+
+
+
+
+

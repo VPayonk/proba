@@ -1,0 +1,19 @@
+@mixin zoomIn($has-class: false) {
+
+    @keyframes zoomIn {
+        from {
+            opacity: 0;
+            transform: scale3d(.3, .3, .3);
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @if $has-class {
+        .zoomIn {
+            animation-name: zoomIn;
+        }
+    }
+}

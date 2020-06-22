@@ -1,0 +1,56 @@
+<header class="header" id="header">
+    <div class="container">
+        <nav class="header__nav nav-main" id="navMain">
+            {% include "layout/_menu.html" %}
+
+        <div class="header__dropdown-wrapper">
+            <div class="lang dropdown-wrapp">
+                <span class="lang__active">
+                    {% include "icons/globe-icon.svg" %}
+                    <span>English</span>
+                </span>
+                <ul class="lang__dropdown dropdown">
+                    <li>
+                        <a href="">Ukr</a>
+                    </li>
+                    <li>
+                        <a href="">Rus</a>
+                    </li>
+                    <li>
+                        <a href="">Pol</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="login dropdown-wrapp">
+                <div class="login__header">
+                    Log in / Sign up
+                    {% include "icons/arrow-down.svg" %}
+                </div>
+                <div class="dropdown">
+                    <ul class="">
+                        <li>
+                            <a href="">Ukr</a>
+                        </li>
+                        <li>
+                            <a href="">Rus</a>
+                        </li>
+                        <li>
+                            <a href="">Pol</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        </nav>
+
+        <button class="header__mobile-btn hamburger" id="navMainBtn">
+            <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+            </span>
+
+            <span class="visually-hidden">Menu</span>
+        </button>
+    </div>
+</header>

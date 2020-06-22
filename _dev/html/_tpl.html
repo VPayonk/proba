@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="{% if page.description %}{{page.description}}{% else %}Page description{% endif %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% if page.title %}{{page.title}}{% else %}Ademrius{% endif %}</title>
+
+
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="{% if page.body_class %}{{page.body_class}}{% endif %}">
+
+
+        {% include "layout/_header.html" %}
+
+        <!-- Main -->
+        <main class="main">
+            {% block main_content %}{% endblock %}
+        </main>
+        <!-- end Main -->
+
+        {% include "layout/_footer.html" %}
+
+
+
+        <!-- Scripts -->
+        <script src="js/plagins/jquery.min.min.js"></script>
+        <script src="js/global.min.js"></script>
+        {% block scripts %}{% endblock %}
+
+    </body>
+</html>

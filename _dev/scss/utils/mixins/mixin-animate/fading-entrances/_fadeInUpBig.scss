@@ -1,0 +1,20 @@
+@mixin fadeInUpBig($has-class: false) {
+
+    @keyframes fadeInUpBig {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 2000px, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    @if $has-class {
+        .fadeInUpBig {
+            animation-name: fadeInUpBig;
+        }
+    }
+}

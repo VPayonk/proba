@@ -1,0 +1,18 @@
+// =============================================================================
+// MIXIN - EXPANDED AREA
+// =============================================================================
+
+@mixin expanded-area($area-vertical: 5px, $area-horizontal: 5px, $pseudo-element: after) {
+    position: relative;
+
+    &:#{$pseudo-element} {
+        content: '';
+        position: absolute;
+        top: -($area-vertical);
+        right: -($area-horizontal);
+        bottom: -($area-vertical);
+        left: -($area-horizontal);
+    }
+}
+
+// end MIXIN - EXPANDED AREA

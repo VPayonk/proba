@@ -1,0 +1,15 @@
+// =============================================================================
+// MIXIN - RESET BUTTON
+// =============================================================================
+
+@mixin reset-button($outline:true) {
+    background: transparent;
+    @if $outline {
+        outline: none;
+    }
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+// end MIXIN - RESET BUTTON

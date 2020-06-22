@@ -1,0 +1,12 @@
+// =============================================================================
+// MIXIN - PLACEHOLDER CONTENT
+// =============================================================================
+
+@mixin placeholder-content {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}
+
+// end MIXIN - PLACEHOLDER CONTENT

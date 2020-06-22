@@ -1,0 +1,23 @@
+@mixin zoomOut($has-class: false) {
+
+    @keyframes zoomOut {
+        from {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+            transform: scale3d(.3, .3, .3);
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @if $has-class {
+        .zoomOut {
+            animation-name: zoomOut;
+        }
+    }
+}

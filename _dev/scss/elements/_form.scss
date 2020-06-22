@@ -1,0 +1,122 @@
+// =============================================================================
+// FORM
+// =============================================================================
+
+form {
+    width: 100%;
+    max-width: 328px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $bp-tb) {
+        max-width: 320px;
+    }
+}
+
+// end FORM
+
+
+
+// =============================================================================
+// INPUT
+// =============================================================================
+
+.input {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 48px;
+    min-height: 48px;
+    //max-height: 200px; // textarea
+    padding: 12px 10px 12px 45px;
+    //margin-bottom: 7px;
+    background-color: color(white);
+    //background-repeat: no-repeat;
+    border: 1px solid #D7DBDA;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+
+    color: color(dark);
+    font-size: 16px;
+
+    transition: border-color .3s ease, background-color 0.3s ease-in-out;
+    appearance: none;
+
+
+    // placeholder
+    @include placeholder-content {
+        color: color(text_grey);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+
+        @media (min-width: $bp-tb) {
+            font-size: 15px;
+            letter-spacing: 0.47px;
+        }
+    }
+
+    // focus
+    &:focus {
+        background-color: color(white);
+        border-color: color(orang);
+
+        // placeholder
+        @include placeholder-content {
+            opacity: 0;
+        }
+    }
+
+    &--name {
+        background-image: url("../img/input-name.png");
+        background-position: calc(100% - 20px) 14px;
+    }
+
+
+}
+
+// end INPUT
+
+// =============================================================================
+// BTN SUBMIT
+// =============================================================================
+
+.btn-submit {
+    width: 100%;
+
+    color: color(white);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-align: center;
+    padding: 13px 0;
+    margin-top: 20px;
+    background-color: color(blue);
+    border: 2px solid color(blue);
+    border-radius: 22px;
+    transition: color .3s ease, background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &--uppercase {
+        text-transform: uppercase;
+
+        @media (min-width: $bp-tb) {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: $bp-tb) {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    &:hover {
+        color: color(blue);
+        background-color: color(white);
+    }
+}
+
+
+// end BTN SUBMIT

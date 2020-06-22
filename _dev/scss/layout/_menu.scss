@@ -1,0 +1,296 @@
+.menu {
+
+    font-size: em(14px);
+    line-height: 1.29;
+    font-weight: 600;
+
+    @media (min-width: $bp-tb) {
+        display: flex;
+    }
+
+
+    // item
+    &__item {
+        position: relative;
+        text-align: center;
+
+        @media (min-width: $bp-tb) {
+            margin: 0 10px 0 0;
+        }
+
+        @media (min-width: $bp-lp) {
+            margin: 0 30px 0 0;
+        }
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+
+    //link
+    &__link {
+        font-weight: 600;
+        font-size: em(14px);
+        display: inline-block;
+        transition: color .3s ease-in-out ;
+
+        &:hover {
+            color: color(orang);
+        }
+
+        &--active {
+            color: color(orang);
+        }
+
+        // focus
+        &:focus {
+
+        }
+
+        // active
+        &:active {
+
+        }
+    }
+}
+
+@include fadeInUp();
+@include fadeInDown();
+
+
+
+
+// =============================================================================
+// NAV MAIN
+// =============================================================================
+
+.nav-main {
+    @media (max-width: $bp-tb - 1) {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: z-index(nav);
+
+        width: 255px;
+        height: auto;
+        padding: 105px 20px 30px 20px;
+        overflow: auto;
+
+
+        display: flex;
+        flex-direction: column;
+        background-color: color(dark);
+
+        transform: translateX(105%);
+        transition: transform .2s;
+        will-change: transform;
+        pointer-events: auto;
+    }
+
+    // menu
+    .menu {
+        @media (max-width: $bp-tb - 1) {
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(color(text_grey), .3);
+
+            &__item {
+                text-align: left;
+                margin: 30px 0 0;
+            }
+
+            &__link {
+                position: relative;
+                text-align: left;
+                color: color(white);
+                padding-top: 0;
+                padding-bottom: 0;
+                overflow: hidden;
+                transition: color .3s ease-in-out, padding-left .3s ease-in-out;
+
+                &:hover {
+                    color: color(blue);
+                    padding-left: 40px;
+
+                    &:before {
+                        left: 0;
+                    }
+                }
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 30px;
+                    height: 12px;
+                    background: url("/img/arrow-right.svg") center no-repeat;
+                    top: 0;
+                    left: -30px;
+                    transition: left .3s ease-in-out;
+                }
+            }
+
+            &__submenu {
+                margin: 0 0 0 25px;
+
+               .menu__item {
+                   margin: 24px 0 0;
+               }
+                
+                .menu__link {
+                    text-transform: none;
+                }
+            }
+        }
+
+            @media (min-width: $bp-lg) {
+            margin-bottom: 0;
+        }
+    }
+
+
+    // open
+    &--open {
+        @media (max-width: $bp-tb - 1) {
+            background-color: color(grey);
+            transform: none;
+            transition-duration: .3s;
+
+            // menu
+            .menu {
+
+                // link
+                &__link {
+                    color: color(blue);
+                }
+            }
+        }
+    }
+}
+
+// =============================================================================
+// HAMBURGER (https://github.com/jonsuh/hamburgers)
+// =============================================================================
+
+.hamburger {
+
+    // Settings
+    $hamburger-layer-width: 18px !default;
+    $hamburger-layer-height: 2px !default;
+    $hamburger-layer-spacing: 5px !default;
+    $hamburger-layer-color: color(dark) !default;
+    $hamburger-layer-border-radius: 0 !default;
+    $hamburger-hover-transition-duration: .15s !default;
+    $hamburger-hover-transition-timing-function: linear !default;
+
+
+    // Base style
+    & {
+        position: absolute;
+        top: 44px;
+        right: 23px;
+        z-index: z-index(nav) + 1;
+        //height: 50px;
+
+        padding: 0;
+        display: inline-block;
+        cursor: pointer;
+
+        transition-property: opacity, filter;
+        transition-duration: $hamburger-hover-transition-duration;
+        transition-timing-function: $hamburger-hover-transition-timing-function;
+
+        // Normalize (<button>)
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible;
+        line-height: 0;
+    }
+
+    // box
+    &__box {
+        position: relative;
+        display: inline-block;
+        width: $hamburger-layer-width;
+        height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+    }
+
+    // inner
+    &__inner {
+        top: 50%;
+        display: block;
+        margin-top: $hamburger-layer-height / -2;
+
+        &, &:before, &:after {
+            position: absolute;
+            width: $hamburger-layer-width;
+            height: $hamburger-layer-height;
+            background-color: $hamburger-layer-color;
+            border-radius: $hamburger-layer-border-radius;
+            transition-timing-function: ease;
+            transition-duration: .15s;
+            transition-property: transform;
+        }
+
+        &:before, &:after {
+            content: '';
+            display: block;
+            background-color: $hamburger-layer-color;
+        }
+
+        &:before {
+            top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+        }
+
+        &:after {
+            bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+        }
+    }
+
+
+    // Squeeze type
+    &__inner {
+        transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+        transition-duration: .075s;
+
+        &::before {
+            transition: top .075s .12s ease,
+            opacity .075s ease;
+        }
+
+        &::after {
+            transition: bottom .075s .12s ease,
+            transform .075s cubic-bezier(.55, .055, .675, .19);
+        }
+    }
+
+
+    // Close style
+    &[aria-expanded='false'] {
+        position: fixed;
+        top: 46px;
+        right: 25px;
+
+        .hamburger__inner {
+            transform: rotate(45deg);
+            transition-delay: .12s;
+            transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top .075s ease,
+                opacity .075s .12s ease;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom .075s ease,
+                transform .075s .12s cubic-bezier(.215, .61, .355, 1);
+            }
+        }
+    }
+}

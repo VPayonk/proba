@@ -1,0 +1,19 @@
+@mixin fadeOutLeft($has-class: false) {
+
+    @keyframes fadeOutLeft {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    @if $has-class {
+        .fadeOutLeft {
+            animation-name: fadeOutLeft;
+        }
+    }
+}

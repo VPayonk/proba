@@ -1,0 +1,23 @@
+# SUBLIME TEXT
+#
+*.sublime-workspace
+*.sublime-project
+
+
+
+
+# PhpStorm/WebStorm
+#
+/.idea*
+
+
+
+# GULP
+#
+/node_modules
+
+
+
+# PSD
+#
+/PSD

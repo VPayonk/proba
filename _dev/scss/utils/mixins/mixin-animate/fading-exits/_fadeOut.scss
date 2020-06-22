@@ -1,0 +1,18 @@
+@mixin fadeOut($has-class: false) {
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @if $has-class {
+        .fadeOut {
+            animation-name: fadeOut;
+        }
+    }
+}
