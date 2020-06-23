@@ -61,7 +61,7 @@ form {
     // focus
     &:focus {
         background-color: color(white);
-        border-color: color(orang);
+        border-color: color(orange);
 
         // placeholder
         @include placeholder-content {

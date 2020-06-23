@@ -1,14 +1,87 @@
 <footer class="footer">
     <div class="container">
-        <a href="" class="footer__logo">
-            {% include "icons/logo.svg" %}
-        </a>
-        <div class="copyright-block">
-            <div class="copyright">COPYRIGHT 2019</div>
-            <div class="powered">Powered by <a href="https://astwellsoft.com" target="_blank">Astwellsoft</a></div>
+        <div class="footer__content">
+            <div class="column">
+                <a href="" class="footer__logo">
+                    {% include "icons/logo.svg" %}
+                </a>
+
+                <ul class="list-group">
+                    <li class="orange">“Ademrius” LTD</li>
+                    <li>3 Gower Street, London, <br>
+                        United Kingdom, WC1E 6HA</li>
+                    <li>
+                        <a href="tel:+442032868405" class="orange">+44 20 3286 8405</a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@ademrius.com" class="orange">info@ademrius.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5 class="column__title">About</h5>
+                <ul class="list-group">
+                    <li><a href="">Who We Are</a></li>
+                    <li><a href="">Whitepapers</a></li>
+                    <li><a href="">Investor Relations</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5 class="column__title">Help</h5>
+                <ul class="list-group">
+                    <li><a href="">Start Free Trial</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Knowledge Base</a></li>
+                    <li><a href="">Customer Support</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5 class="column__title">Get Ademrius App</h5>
+                <ul class="store-list">
+                    <li>
+                        <a href="">
+                            <img src="img/app-store.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/google-play.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
         </div>
-        <a href="" class="footer__facebook-link" target="_blank">
-            <img src="img/facebook-green.png" alt="">
-        </a>
+        <div class="footer__footer">
+            <ul class="icon-group">
+                <li>
+                    <a href="">
+                        {% include "icons/instagram.svg" %}
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        {% include "icons/facebook.svg" %}
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        {% include "icons/linkedin.svg" %}
+                    </a>
+                </li>
+            </ul>
+
+            <div class="flex jcb">
+                <ul class="list-group list-group--row">
+                    <li><a href="">Privicy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                </ul>
+                <div class="copyright">Copyright © 2020 Ademrius, All rights reserved </div>
+            </div>
+        </div>
+
+
     </div>
 </footer>
