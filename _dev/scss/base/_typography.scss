@@ -27,8 +27,12 @@ h2, .h--2 {
 }
 
 h3, .h--3 {
-    font-size: em(32px);
+    font-size: em(27px);
     line-height: 1.5;
+
+    @media (min-width: $bp-lp) {
+        font-size: em(32px);
+    }
 }
 
 h4, .h--4 {
@@ -45,9 +49,13 @@ h6, .h--6 {
 }
 
 p {
-    font-size: em(19px);
+    font-size: em(14px);
     letter-spacing: -0.01em;
     line-height: 1.5;
+
+    @media (min-width: $bp-lp) {
+        font-size: em(19px);
+    }
 }
 
 
