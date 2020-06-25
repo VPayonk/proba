@@ -3,13 +3,29 @@
 // =============================================================================
 
 form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 328px;
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: $bp-tb) {
-        max-width: 320px;
+    @media (min-width: $bp-lp) {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &>* {
+            margin: 0 5px 10px;
+        }
+    }
+
+    @media (min-width: $bp-cont) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .calendar-wrapp {
+        position: relative;
     }
 }
 
@@ -24,15 +40,12 @@ form {
 .input {
     position: relative;
     width: 100%;
-    min-width: 100%;
-    max-width: 100%;
     height: 48px;
     min-height: 48px;
-    //max-height: 200px; // textarea
     padding: 12px 10px 12px 45px;
-    //margin-bottom: 7px;
     background-color: color(white);
-    //background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: 15px 14px;
     border: 1px solid #D7DBDA;
     border-radius: 10px;
     outline: none;
@@ -41,40 +54,56 @@ form {
     color: color(dark);
     font-size: 16px;
 
-    transition: border-color .3s ease, background-color 0.3s ease-in-out;
+    transition: border-color .3s ease;
     appearance: none;
 
+    @media (max-width: $bp-lp - 1) {
+        max-width: none !important;
+        margin-bottom: 20px;
+    }
 
-    // placeholder
+        // placeholder
     @include placeholder-content {
         color: color(text_grey);
         font-size: 16px;
         font-weight: 600;
         line-height: 1.5;
 
-        @media (min-width: $bp-tb) {
-            font-size: 15px;
-            letter-spacing: 0.47px;
-        }
     }
 
     // focus
+    &:hover,
     &:focus {
-        background-color: color(white);
         border-color: color(orange);
+    }
 
-        // placeholder
+    &:focus {
         @include placeholder-content {
             opacity: 0;
         }
     }
 
-    &--name {
-        background-image: url("../img/input-name.png");
-        background-position: calc(100% - 20px) 14px;
+    &--search {
+        max-width: 350px;
+        background-image: url("../img/input/input-search.png");
+        background-position: 15px 12px;
     }
 
+    &--calendar {
+        max-width: 245px;
+        margin-right: 0;
+        background-image: url("../img/input/input-calendar.png");
+    }
 
+    &--city {
+        max-width: 220px;
+        background-image: url("../img/input/input-city.png");
+    }
+
+    &--clinic {
+        max-width: 240px;
+        background-image: url("../img/input/input-clinic.png");
+    }
 }
 
 // end INPUT
@@ -83,38 +112,50 @@ form {
 // BTN SUBMIT
 // =============================================================================
 
-.btn-submit {
+.btn-find {
     width: 100%;
-
+    height: 48px;
     color: color(white);
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.8px;
     text-align: center;
-    padding: 13px 0;
-    margin-top: 20px;
-    background-color: color(blue);
-    border: 2px solid color(blue);
-    border-radius: 22px;
-    transition: color .3s ease, background-color 0.3s ease-in-out;
+    padding: 0 20px;
+    background-color: color(orange);
+    border: 2px solid color(orange);
+    border-radius: 10px;
+    transition: border-color .3s ease-in-out, background-color 0.3s ease-in-out;
     cursor: pointer;
 
-    &--uppercase {
-        text-transform: uppercase;
-
-        @media (min-width: $bp-tb) {
-            font-size: 16px;
-        }
-    }
-
     @media (min-width: $bp-tb) {
-        font-size: 15px;
-        letter-spacing: 1px;
+        width: auto;
+        font-size: 16px;
     }
 
     &:hover {
-        color: color(blue);
-        background-color: color(white);
+        border-color: color(dark);
+        background-color: color(dark);
+    }
+}
+
+.btn-date {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    color: #3F414D;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: color(grey);
+    border: 1px solid color(grey);
+    border-radius: 10px;
+    transition: border-color .3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        border-color: color(orange);
+        background-color: color(orange);
     }
 }
 

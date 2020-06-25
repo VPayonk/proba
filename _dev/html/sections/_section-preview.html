@@ -1,6 +1,32 @@
 <section class="section section-preview">
     <div class="container">
-        {% include "icons/logo.svg" %}
+        <div class="logo">
+            {% include "icons/logo.svg" %}
+        </div>
+        <h1>
+            Find a You Best Doctor
+        </h1>
+
+        <form action="">
+            <input type="text"
+                   placeholder="Condition, procedure, doctor name"
+                   name="" class="input input--search">
+            <div class="calendar-wrapp">
+                <input type="text"
+                       placeholder="Go to date"
+                       id="datepicker"
+                       name="" class="input input--calendar">
+                <button type="button" class="btn-date">Today</button>
+            </div>
+            <input type="text"
+                   placeholder="City or zip code"
+                   name="" class="input input--city">
+            <input type="text"
+                   placeholder="Clinic’s name"
+                   name="" class="input input--clinic">
+
+            <button type="submit" class="btn-find">Find</button>
+        </form>
 
 
     </div>

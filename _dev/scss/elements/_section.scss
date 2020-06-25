@@ -9,6 +9,30 @@
         background-color: color(grey);
     }
 
+    &--l {
+        .container {
+            @media (min-width: $bp-lg) {
+                padding-left: 55px;
+            }
+            @media (min-width: $bp-cont) {
+                padding-left: 105px;
+            }
+        }
+    }
+
+    &--r {
+        .container {
+            @media (min-width: $bp-lg) {
+                padding-right: 55px;
+            }
+            @media (min-width: $bp-cont) {
+                padding-right: 105px;
+            }
+        }
+    }
+
+
+
 
 
 

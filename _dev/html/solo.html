@@ -1,13 +1,12 @@
 {% extends "_tpl.html" %}
 
 {% set page = {
-    'title': 'For Patient',
-    'body_class': 'index-page'
+    'title': 'For Solo Practice',
+    'body_class': 'solo-page'
 } %}
 
 {% block head %}
-    <link rel="stylesheet" href="css/plagins/foopicker.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/solo.css">
 {% endblock %}
 
 
@@ -17,7 +16,6 @@
     {% include "sections/_section-clinic.html" %}
     {% include "sections/_section-request.html" %}
     {% include "sections/_section-keeps-data.html" %}
-    {% include "sections/_section-free.html" %}
 
 <!--    {% include "sections/_section-preview.html" %}-->
 
@@ -25,8 +23,7 @@
 
 
 {% block scripts %}
-    <script src="../js/plagins/foopicker.js"></script>
-    <script src="../js/index.min.js"></script>
+    <script src="../js/solo.min.js"></script>
 {% endblock %}
 
 

@@ -1,3 +1,6 @@
+@import '../elements/_column';
+
+
 .footer {
     padding: 50px 0 60px;
     background: color(grey);
@@ -10,39 +13,17 @@
         flex-direction: column;
     }
 
-    &__content {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    .column-wrapp {
         padding-bottom: 10px;
 
         @media (min-width: $bp-lp) {
-            justify-content: space-between;
-            flex-wrap: nowrap;
             padding-bottom: 20px;
         }
 
         .column {
             margin-bottom: 40px;
-            @media (max-width: $bp-tb - 1) {
-                width: 100%;
-                text-align: left;
-            }
-
-            @media (min-width: $bp-tb) and (max-width: $bp-lp - 1) {
-                width: 50%;
-                text-align: center;
-            }
-
-            @media (min-width: $bp-lp) {
-                flex-grow: 1;
-                margin-bottom: 0;
-            }
 
             &__title {
-                font-weight: bold;
-                line-height: 200%;
-                color: color(dark);
                 margin-bottom: 25px;
             }
         }
@@ -123,50 +104,6 @@
         }
     }
 
-    .list-group {
-        font-size: 14px;
-        line-height: 200%;
-        color: color(dark);
-
-        .orange {
-            color: color(orange);
-            transition: color .3s ease-in-out;
-        }
-
-        a.orange:hover {
-            color: color(dark);
-        }
-
-        a {
-            transition: color .3s ease-in-out;
-
-            &:hover {
-                color: color(orange);
-            }
-        }
-
-        &--row {
-            display: flex;
-            flex-direction: column;
-
-            @media (min-width: $bp-tb) {
-                justify-content: space-between;
-                flex-direction: row;
-            }
-
-            li {
-                @media (max-width: $bp-tb - 1) {
-                    margin-bottom: 20px;
-                }
-            }
-
-            li:first-of-type {
-                @media (min-width: $bp-tb) {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
 
     .store-list {
         li:first-of-type {

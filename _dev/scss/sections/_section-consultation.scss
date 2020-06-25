@@ -1,0 +1,162 @@
+.section-consultation {
+    position: relative;
+    top: -10px;
+    height: 600px;
+    padding-top: 30px;
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 10px);
+        left: 0;
+        top: 0;
+        background: url("../img/consultation-bg.jpg") no-repeat center;
+        background-size: cover;
+
+        @media (min-width: $bp-lp) {
+            height: 100%;
+        }
+    }
+
+    @media (min-width: $bp-tb) {
+        top: 0;
+        height: 450px;
+        padding-top: 45px;
+    }
+
+    @media (min-width: $bp-lp) {
+        height: 265px;
+        padding-top: 45px;
+    }
+
+    @media (min-width: $bp-cont) {
+        height: 320px;
+        padding-top: 65px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: $bp-lp) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        background: color(white);
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: $bp-tb) {
+            flex-direction: row;
+        }
+
+        @media (min-width: $bp-lp) {
+            margin-bottom: 0;
+            width: calc(50% - 12px);
+        }
+
+        @media (min-width: $bp-lg) {
+            padding: 30px 15px 35px 25px;
+        }
+
+        @media (min-width: $bp-cont) {
+            padding: 40px 15px 45px 40px;
+        }
+
+        z-index: 1;
+
+        &>div {
+            @media (max-width: $bp-tb - 1) {
+                text-align: center;
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+            width: 59px;
+            height: 100px;
+
+            @media (min-width: $bp-tb) {
+                margin-bottom: 0;
+                margin-right: 20px;
+                width: 100px;
+                height: 160px;
+            }
+
+            @media (min-width: $bp-lp) {
+                margin-right: 10px;
+
+            }
+
+            @media (min-width: $bp-lg) {
+                width: auto;
+                height: auto;
+                margin-right: 20px;
+            }
+
+            @media (min-width: $bp-cont) {
+                margin-right: 40px;
+            }
+        }
+
+        h4 {
+            margin-bottom: 9px;
+
+            @media (min-width: $bp-lg) {
+                margin-bottom: 27px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+
+            @media (min-width: $bp-lg) {
+                margin-bottom: 45px;
+            }
+        }
+
+        a {
+            display: inline-block;
+            color: color(white);
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1.25;
+            padding: 13px 20px;
+            background-color: color(orange);
+            border: 2px solid color(orange);
+            border-radius: 10px;
+            transition: color .3s ease, background-color .3s ease-in-out;
+
+            @media (min-width: $bp-lp) {
+                padding: 13px 15px;
+
+            }
+
+            @media (min-width: $bp-lg) {
+                padding: 13px 20px;
+            }
+
+            &:hover {
+                color: color(orange);
+                background-color: color(white);
+            }
+        }
+
+
+    }
+
+
+}

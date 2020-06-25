@@ -1,15 +1,6 @@
 .section-keeps-data {
     padding: 90px 0;
 
-    .container {
-        @media (min-width: $bp-lg) {
-            padding-left: 55px;
-        }
-        @media (min-width: $bp-cont) {
-            padding-left: 105px;
-        }
-    }
-
     h3 {
         margin-bottom: 20px;
     }

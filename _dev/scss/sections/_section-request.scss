@@ -1,0 +1,19 @@
+@import '../elements/_column';
+@import '../elements/_list-group';
+
+.section-request {
+    padding: 100px 0 10px;
+
+    @media (min-width: $bp-lp) {
+        padding: 100px 0 50px;
+    }
+
+    h2 {
+        margin-bottom: 50px;
+
+        @media (min-width: $bp-lp) {
+            margin-bottom: 70px;
+        }
+    }
+
+}

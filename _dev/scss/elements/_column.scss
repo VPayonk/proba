@@ -1,0 +1,35 @@
+.column-wrapp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: $bp-lp) {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+.column {
+    margin-bottom: 50px;
+    @media (max-width: $bp-tb - 1) {
+        width: 100%;
+        text-align: left;
+    }
+
+    @media (min-width: $bp-tb) and (max-width: $bp-lp - 1) {
+        width: 50%;
+        text-align: center;
+    }
+
+    @media (min-width: $bp-lp) {
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-weight: bold;
+        line-height: 200%;
+        color: color(dark);
+        margin-bottom: 40px;
+    }
+}

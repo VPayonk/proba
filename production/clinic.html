@@ -4,12 +4,11 @@
         <meta charset="utf-8">
         <meta name="description" content="Page description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>For Patient</title>
+        <title>For Clinic</title>
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/plagins/foopicker.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/clinic.css">
     </head>
-    <body class="index-page">
+    <body class="clinic-page">
         <header class="header" id="header">
             <div class="container">
                 <nav class="header__nav nav-main" id="navMain">
@@ -75,169 +74,191 @@
         </header>
         <!-- Main -->
         <main class="main">
-            <section class="section section-preview">
-                <div class="container">
-                    <div class="logo">
-                        <svg width="140" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M40.5 12.9l-.9-2.8 2.2-.8c.7-.2 1.5-.3 2.3-.3 1 0 1.9.2 2.7.6.8.4 1.5 1 2 1.6.4.7.7 1.5.7 2.4v8.1h-2.2l-.6-1.3c-1 1-2.1 1.6-3.3 1.6-1.4 0-2.6-.3-3.3-1a3.9 3.9 0 01-1-3 3.5 3.5 0 011.2-2.9c1-.7 2.2-1.1 3.4-1h2.4c0-.6-.1-1.1-.5-1.5a2 2 0 00-1.5-.5c-.6 0-1.2 0-1.8.2l-1.8.6zm1.3 5.1a1.3 1.3 0 00.4 1c.3.3.8.4 1.2.4a3.9 3.9 0 002.7-1.2v-2h-2.5a1.8 1.8 0 00-1.3.6c-.3.3-.5.8-.5 1.2zM63.2 21.8h-1.7l-.8-1.1c-1 .9-2.2 1.4-3.5 1.4a6 6 0 01-4.6-1.7 6.6 6.6 0 01-1.7-4.8c0-1.1.3-2.3.8-3.4.5-1 1.2-1.8 2.2-2.3 1-.6 2.2-.8 3.4-.8.4 0 .8 0 1.3.2l1.3.6V4.1l3.3-.3v18zm-8-3.5a2.6 2.6 0 002 1c.5 0 1-.1 1.4-.3a6 6 0 001.3-.7V13c-.4-.4-.8-.6-1.3-.8-.4-.2-.9-.3-1.3-.3a2.6 2.6 0 00-2.2 1c-.5.8-.8 1.8-.8 2.7 0 1 .3 2 .8 2.7zM77.4 15.6v1h-8.3c.1.8.5 1.5 1 2 .7.5 1.5.7 2.7.7.6 0 1.3-.1 1.8-.3.7-.2 1.2-.5 1.8-.8l1 2.4a7.3 7.3 0 01-4.7 1.5c-2.3 0-4.1-.6-5.3-1.7a6.2 6.2 0 01-1.8-4.8c0-1.2.2-2.3.7-3.4.5-1 1.2-1.7 2.2-2.3 1-.5 2.1-.8 3.3-.8 1 0 2.2.3 3.1.9.9.5 1.5 1.4 1.9 2.3.4 1 .6 2.2.6 3.3zm-8.3-1.2h5.2c-.1-.7-.4-1.3-1-1.9-.4-.4-1-.6-1.6-.6-.6 0-1.2.2-1.7.7a3 3 0 00-.9 1.8zM97.6 10.2c.7.7 1 1.8 1 3.3v8.3h-3.3v-7.6c0-.6-.1-1.2-.4-1.8a1.3 1.3 0 00-1.2-.6c-.5 0-1 .1-1.4.3l-1.6 1.1v8.6h-3.3v-7.6c0-.6-.1-1.2-.4-1.8a1.3 1.3 0 00-1.2-.6c-.5 0-1 .1-1.4.3l-1.6 1.1v8.6h-3.4V9.4h2.2l.6 1.4c.7-.6 1.5-1 2.4-1.3.6-.3 1.4-.5 2.1-.5 1.7 0 2.8.6 3.4 1.7.8-.5 1.6-1 2.4-1.2.7-.3 1.4-.5 2.1-.5 1.4 0 2.4.4 3 1.2zM104.6 14.3v7.5h-3.3V9.4h1.8l1 2c.7-.5 1.4-1 2.1-1.3.7-.4 1.4-.6 2.2-.7l.6 2.7a5 5 0 00-2 .6c-.9.4-1.7 1-2.4 1.6zM112.3 7.7A1.8 1.8 0 01111 7a1.8 1.8 0 01-.5-1.3 1.8 1.8 0 011.8-1.9 1.9 1.9 0 012 1.9 1.8 1.8 0 01-.6 1.3 1.8 1.8 0 01-1.4.6zm1.7 1.7v12.4h-3.3V9.4h3.3zM125.1 18V9.4h3.4v12.4h-2.2l-.6-1.3c-.7.5-1.5 1-2.4 1.3a7 7 0 01-2.3.4c-1.6 0-2.7-.4-3.3-1.3-.7-.9-1-2.1-1-3.7V9.4h3.3V17c0 .7.2 1.3.5 1.8a1.5 1.5 0 001.3.7c.6 0 1.2-.2 1.7-.4l1.6-1zM130.6 20.8l1-2.2c1 .5 2 .8 3.2.9.5 0 1-.1 1.4-.3.4-.2.6-.5.6-.8 0-.7-.7-1.2-2.1-1.7-1-.3-2-.8-3-1.5a2.8 2.8 0 01-1.1-2.3 3.3 3.3 0 011.3-2.8c.8-.6 2-1 3.5-1 .7 0 1.4.2 2.1.4.8.2 1.5.5 2.1 1l-1 2.1-1.7-.6a6 6 0 00-1.6-.2c-.3 0-.7 0-1 .3a1 1 0 00-.4.8c0 .2.1.4.5.6l1.4.6c1 .3 2.1 1 3 1.6a3.2 3.2 0 011.2 2.5 3.4 3.4 0 01-1.3 3c-1 .6-2.2 1-3.9 1a9 9 0 01-2.2-.4c-.7-.2-1.4-.5-2-1z" fill="#292E38" />
-                            <path d="M23.4 10.5v5.3h-4.9v-5.3h-5.3v-5h5.3V.7a14.4 14.4 0 10-4.1 28.1h14.3V14.4c0-1.4-.2-2.7-.5-4h-4.8z" fill="#F47632" />
-                            <path d="M28.7.2h-5.3v5.4h5.3V.2z" fill="#67C9D3" /></svg>
-                    </div>
-                    <h1> Find a You Best Doctor </h1>
-                    <form action="">
-                        <input type="text" placeholder="Condition, procedure, doctor name" name="" class="input input--search">
-                        <div class="calendar-wrapp">
-                            <input type="text" placeholder="Go to date" id="datepicker" name="" class="input input--calendar">
-                            <button type="button" class="btn-date">Today</button>
-                        </div>
-                        <input type="text" placeholder="City or zip code" name="" class="input input--city">
-                        <input type="text" placeholder="Clinic’s name" name="" class="input input--clinic">
-                        <button type="submit" class="btn-find">Find</button>
-                    </form>
-                </div>
-            </section>
-            <div class="section section-consultation">
-                <div class="bg"></div>
-                <div class="container">
-                    <div class="item">
-                        <img src="img/consultation1.png" alt="">
-                        <div>
-                            <h4>Get online consultation!</h4>
-                            <p> Telemedecine gives ability to have appointment whenever you want in every place you need. </p>
-                            <a href="" class="item-link">Book online consultation</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/consultation2.png" alt="">
-                        <div>
-                            <h4>Schedule Doctor Home Visit!</h4>
-                            <p> Telemedecine gives ability to have appointment whenever you want in every place you need. </p>
-                            <a href="">Book doctor home visit</a>
-                        </div>
-                    </div>
-                </div>
+            <!--    <section class="section section-preview">
+    <div class="container">
+        <div class="logo">
+            <svg width="140" height="29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.5 12.9l-.9-2.8 2.2-.8c.7-.2 1.5-.3 2.3-.3 1 0 1.9.2 2.7.6.8.4 1.5 1 2 1.6.4.7.7 1.5.7 2.4v8.1h-2.2l-.6-1.3c-1 1-2.1 1.6-3.3 1.6-1.4 0-2.6-.3-3.3-1a3.9 3.9 0 01-1-3 3.5 3.5 0 011.2-2.9c1-.7 2.2-1.1 3.4-1h2.4c0-.6-.1-1.1-.5-1.5a2 2 0 00-1.5-.5c-.6 0-1.2 0-1.8.2l-1.8.6zm1.3 5.1a1.3 1.3 0 00.4 1c.3.3.8.4 1.2.4a3.9 3.9 0 002.7-1.2v-2h-2.5a1.8 1.8 0 00-1.3.6c-.3.3-.5.8-.5 1.2zM63.2 21.8h-1.7l-.8-1.1c-1 .9-2.2 1.4-3.5 1.4a6 6 0 01-4.6-1.7 6.6 6.6 0 01-1.7-4.8c0-1.1.3-2.3.8-3.4.5-1 1.2-1.8 2.2-2.3 1-.6 2.2-.8 3.4-.8.4 0 .8 0 1.3.2l1.3.6V4.1l3.3-.3v18zm-8-3.5a2.6 2.6 0 002 1c.5 0 1-.1 1.4-.3a6 6 0 001.3-.7V13c-.4-.4-.8-.6-1.3-.8-.4-.2-.9-.3-1.3-.3a2.6 2.6 0 00-2.2 1c-.5.8-.8 1.8-.8 2.7 0 1 .3 2 .8 2.7zM77.4 15.6v1h-8.3c.1.8.5 1.5 1 2 .7.5 1.5.7 2.7.7.6 0 1.3-.1 1.8-.3.7-.2 1.2-.5 1.8-.8l1 2.4a7.3 7.3 0 01-4.7 1.5c-2.3 0-4.1-.6-5.3-1.7a6.2 6.2 0 01-1.8-4.8c0-1.2.2-2.3.7-3.4.5-1 1.2-1.7 2.2-2.3 1-.5 2.1-.8 3.3-.8 1 0 2.2.3 3.1.9.9.5 1.5 1.4 1.9 2.3.4 1 .6 2.2.6 3.3zm-8.3-1.2h5.2c-.1-.7-.4-1.3-1-1.9-.4-.4-1-.6-1.6-.6-.6 0-1.2.2-1.7.7a3 3 0 00-.9 1.8zM97.6 10.2c.7.7 1 1.8 1 3.3v8.3h-3.3v-7.6c0-.6-.1-1.2-.4-1.8a1.3 1.3 0 00-1.2-.6c-.5 0-1 .1-1.4.3l-1.6 1.1v8.6h-3.3v-7.6c0-.6-.1-1.2-.4-1.8a1.3 1.3 0 00-1.2-.6c-.5 0-1 .1-1.4.3l-1.6 1.1v8.6h-3.4V9.4h2.2l.6 1.4c.7-.6 1.5-1 2.4-1.3.6-.3 1.4-.5 2.1-.5 1.7 0 2.8.6 3.4 1.7.8-.5 1.6-1 2.4-1.2.7-.3 1.4-.5 2.1-.5 1.4 0 2.4.4 3 1.2zM104.6 14.3v7.5h-3.3V9.4h1.8l1 2c.7-.5 1.4-1 2.1-1.3.7-.4 1.4-.6 2.2-.7l.6 2.7a5 5 0 00-2 .6c-.9.4-1.7 1-2.4 1.6zM112.3 7.7A1.8 1.8 0 01111 7a1.8 1.8 0 01-.5-1.3 1.8 1.8 0 011.8-1.9 1.9 1.9 0 012 1.9 1.8 1.8 0 01-.6 1.3 1.8 1.8 0 01-1.4.6zm1.7 1.7v12.4h-3.3V9.4h3.3zM125.1 18V9.4h3.4v12.4h-2.2l-.6-1.3c-.7.5-1.5 1-2.4 1.3a7 7 0 01-2.3.4c-1.6 0-2.7-.4-3.3-1.3-.7-.9-1-2.1-1-3.7V9.4h3.3V17c0 .7.2 1.3.5 1.8a1.5 1.5 0 001.3.7c.6 0 1.2-.2 1.7-.4l1.6-1zM130.6 20.8l1-2.2c1 .5 2 .8 3.2.9.5 0 1-.1 1.4-.3.4-.2.6-.5.6-.8 0-.7-.7-1.2-2.1-1.7-1-.3-2-.8-3-1.5a2.8 2.8 0 01-1.1-2.3 3.3 3.3 0 011.3-2.8c.8-.6 2-1 3.5-1 .7 0 1.4.2 2.1.4.8.2 1.5.5 2.1 1l-1 2.1-1.7-.6a6 6 0 00-1.6-.2c-.3 0-.7 0-1 .3a1 1 0 00-.4.8c0 .2.1.4.5.6l1.4.6c1 .3 2.1 1 3 1.6a3.2 3.2 0 011.2 2.5 3.4 3.4 0 01-1.3 3c-1 .6-2.2 1-3.9 1a9 9 0 01-2.2-.4c-.7-.2-1.4-.5-2-1z" fill="#292E38"/><path d="M23.4 10.5v5.3h-4.9v-5.3h-5.3v-5h5.3V.7a14.4 14.4 0 10-4.1 28.1h14.3V14.4c0-1.4-.2-2.7-.5-4h-4.8z" fill="#F47632"/><path d="M28.7.2h-5.3v5.4h5.3V.2z" fill="#67C9D3"/></svg>
+        </div>
+        <h1>
+            Find a You Best Doctor
+        </h1>
+
+        <form action="">
+            <input type="text"
+                   placeholder="Condition, procedure, doctor name"
+                   name="" class="input input--search">
+            <div class="calendar-wrapp">
+                <input type="text"
+                       placeholder="Go to date"
+                       id="datepicker"
+                       name="" class="input input--calendar">
+                <button type="button" class="btn-date">Today</button>
             </div>
-            <div class="section section--grey section--l section--r section-clinic">
-                <div class="container">
-                    <h2>Clinic title</h2>
-                    <p> Ademrius is comprehensive, but still simple international SaaS solution for healthcare professionals. </p>
-                    <div class="clinic-group">
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic1.png" alt="">
-                        </div>
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic2.png" alt="">
-                        </div>
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic3.png" alt="">
-                        </div>
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic4.png" alt="">
-                        </div>
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic5.png" alt="">
-                        </div>
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic6.png" alt="">
-                        </div>
-                        <div class="clinic-group__item">
-                            <img src="img/clinic/clinic7.png" alt="">
-                        </div>
-                    </div>
-                </div>
+            <input type="text"
+                   placeholder="City or zip code"
+                   name="" class="input input--city">
+            <input type="text"
+                   placeholder="Clinic’s name"
+                   name="" class="input input--clinic">
+
+            <button type="submit" class="btn-find">Find</button>
+        </form>
+
+
+    </div>
+
+</section>-->
+            <!--    <div class="section section-consultation">
+    <div class="bg"></div>
+    <div class="container">
+        <div class="item">
+            <img src="img/consultation1.png" alt="">
+            <div>
+                <h4>Get online consultation!</h4>
+                <p>
+                    Telemedecine gives ability to have appointment whenever you want in every place you need.
+                </p>
+                <a href="" class="item-link">Book online consultation</a>
             </div>
-            <div class="section section--grey section--l section--r section-request">
-                <div class="container">
-                    <h2>Most Popular Requests</h2>
-                    <div class="column-wrapp">
-                        <div class="column">
-                            <h5 class="column__title">Speciality</h5>
-                            <ul class="list-group">
-                                <li><a href="">Alergist</a></li>
-                                <li><a href="">Primary Care Doctor</a></li>
-                                <li><a href="">Dermatologist</a></li>
-                                <li><a href="">Dentist</a></li>
-                                <li><a href="">Psychiatrist</a></li>
-                                <li><a href="">Ear, Nose & Throat Doctor</a></li>
-                                <li><a href="">Podiatrist</a></li>
-                                <li><a href="">Urologist</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h5 class="column__title">Diagnosis</h5>
-                            <ul class="list-group">
-                                <li><a href="">Ischemic heart disease</a></li>
-                                <li><a href="">Stroke</a></li>
-                                <li><a href="">Lower respiratory infections</a></li>
-                                <li><a href="">Chronic obstructive pulmonary disease</a></li>
-                                <li><a href="">Lung cancer</a></li>
-                                <li><a href="">Diabetes mellitus</a></li>
-                                <li><a href="">Alzheimer’s disease</a></li>
-                                <li><a href="">Tuberculosis</a></li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h5 class="column__title">City</h5>
-                            <ul class="list-group">
-                                <li><a href=""></a></li>
-                                <li><a href="">Lviv</a></li>
-                                <li><a href="">Kyiv</a></li>
-                                <li><a href="">Ivano-Frankivsk</a></li>
-                                <li><a href="">Uzhhorod</a></li>
-                                <li><a href="">Ternopil</a></li>
-                                <li><a href="">Brovary</a></li>
-                                <li><a href="">Rivne</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="item">
+            <img src="img/consultation2.png" alt="">
+            <div>
+                <h4>Schedule Doctor Home Visit!</h4>
+                <p>
+                    Telemedecine gives ability to have appointment whenever you want in every place you need.
+                </p>
+                <a href="">Book doctor home visit</a>
             </div>
-            <section class="section section--grey section--l section-keeps-data">
-                <div class="container">
-                    <h3> Ademrius keeps your data safe </h3>
-                    <p> We understand how crusial is sensitive data protection in healthcare. And how personal it could be. Data fraud is not always the digital security issue. That's why we have chosen user-centered approach to protect your data. </p>
-                    <div class="shield-block">
-                        <img src="img/shield.png" alt="">
-                        <ul>
-                            <li>You can manage accessto your medical data</li>
-                            <li>You can track access to your data with smart log</li>
-                            <li class="mobile">Request-based access to Patient medical data with smart log</li>
-                        </ul>
-                    </div>
-                    <div class="certificate-block">
-                        <div class="certificate-block__item">
-                            <img src="img/certificate/certificate1.png" alt="">
-                            <span>Blockchain based technology</span>
-                        </div>
-                        <div class="certificate-block__item">
-                            <img src="img/certificate/certificate2.png" alt="">
-                            <span>ISO 27001 standard <br> for information security</span>
-                        </div>
-                        <div class="certificate-block__item">
-                            <img src="img/certificate/certificate3.png" alt="">
-                            <span>General Data Protection Regulation</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section-free">
-                <div class="container">
-                    <h2>Use For Free Forever</h2>
-                    <p>Best time to take care of your health. More so it's so simple now.</p>
-                    <div class="link-group">
-                        <a href="">Book an appointment</a>
-                        <a class="border" href="">Sign up</a>
-                    </div>
-                </div>
-                <div class="container mobile">
-                    <h2>Join Healthcare Professionals Openspace</h2>
-                    <p>Manage and grow your practice, all in one place.</p>
-                    <div class="link-group">
-                        <a href="">Start free trial</a>
-                    </div>
-                    <p class="small-txt">30-day trial, no credit card </p>
-                </div>
-            </section>
+        </div>
+    </div>
+</div>-->
+            <!--    <div class="section section--grey section--l section--r section-clinic">
+    <div class="container">
+
+        <h2>Clinic title</h2>
+        <p>
+            Ademrius is comprehensive, but still simple international SaaS solution for healthcare professionals.
+        </p>
+
+        <div class="clinic-group">
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic1.png" alt="">
+            </div>
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic2.png" alt="">
+            </div>
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic3.png" alt="">
+            </div>
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic4.png" alt="">
+            </div>
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic5.png" alt="">
+            </div>
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic6.png" alt="">
+            </div>
+            <div class="clinic-group__item">
+                <img src="img/clinic/clinic7.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>-->
+            <!--    <div class="section section--grey section--l section--r section-request">
+    <div class="container">
+
+        <h2>Most Popular Requests</h2>
+
+        <div class="column-wrapp">
+            <div class="column">
+                <h5 class="column__title">Speciality</h5>
+                <ul class="list-group">
+                    <li><a href="">Alergist</a></li>
+                    <li><a href="">Primary Care Doctor</a></li>
+                    <li><a href="">Dermatologist</a></li>
+                    <li><a href="">Dentist</a></li>
+                    <li><a href="">Psychiatrist</a></li>
+                    <li><a href="">Ear, Nose & Throat Doctor</a></li>
+                    <li><a href="">Podiatrist</a></li>
+                    <li><a href="">Urologist</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5 class="column__title">Diagnosis</h5>
+                <ul class="list-group">
+                    <li><a href="">Ischemic heart disease</a></li>
+                    <li><a href="">Stroke</a></li>
+                    <li><a href="">Lower respiratory infections</a></li>
+                    <li><a href="">Chronic obstructive pulmonary disease</a></li>
+                    <li><a href="">Lung cancer</a></li>
+                    <li><a href="">Diabetes mellitus</a></li>
+                    <li><a href="">Alzheimer’s disease</a></li>
+                    <li><a href="">Tuberculosis</a></li>
+                </ul>
+            </div>
+                <div class="column">
+                <h5 class="column__title">City</h5>
+                <ul class="list-group">
+                    <li><a href=""></a></li>
+                    <li><a href="">Lviv</a></li>
+                    <li><a href="">Kyiv</a></li>
+                    <li><a href="">Ivano-Frankivsk</a></li>
+                    <li><a href="">Uzhhorod</a></li>
+                    <li><a href="">Ternopil</a></li>
+                    <li><a href="">Brovary</a></li>
+                    <li><a href="">Rivne</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>-->
+            <!--    <section class="section section--grey section--l section-keeps-data">
+    <div class="container">
+        <h3>
+            Ademrius keeps your data safe
+        </h3>
+
+        <p>
+            We understand how crusial is sensitive data protection in healthcare.
+            And how personal it could be. Data fraud is not always the digital security issue.
+            That's why we have chosen  user-centered approach to protect your data.
+        </p>
+
+        <div class="shield-block">
+            <img src="img/shield.png" alt="">
+
+            <ul>
+                <li>You can manage accessto your medical data</li>
+                <li>You can track access to your data with smart log</li>
+                <li class="mobile">Request-based access to Patient medical data with smart log</li>
+            </ul>
+        </div>
+
+        <div class="certificate-block">
+            <div class="certificate-block__item">
+                <img src="img/certificate/certificate1.png" alt="">
+                <span>Blockchain based technology</span>
+            </div>
+            <div class="certificate-block__item">
+                <img src="img/certificate/certificate2.png" alt="">
+                <span>ISO 27001 standard <br> for information security</span>
+            </div>
+            <div class="certificate-block__item">
+                <img src="img/certificate/certificate3.png" alt="">
+                <span>General Data Protection Regulation</span>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</section>-->
             <!--    <section class="section section-preview">
     <div class="container">
         <div class="logo">
@@ -372,7 +393,6 @@
         <!-- Scripts -->
         <script src="js/plagins/jquery.min.min.js"></script>
         <script src="js/global.min.js"></script>
-        <script src="../js/plagins/foopicker.js"></script>
-        <script src="../js/index.min.js"></script>
+        <script src="../js/clinic.min.js"></script>
     </body>
 </html>
