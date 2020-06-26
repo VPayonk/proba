@@ -1,0 +1,17 @@
+<div class="section-help__item {% if item.class %}{{ item.class }}{% endif %}">
+    <img src="{{ item.img }}" alt="">
+
+    <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+
+        {% if item.list %}
+            <ul class="help-list">
+                <li>{% include "icons/help/help1-icon.svg" %} Emergency Hours</li>
+                <li>{% include "icons/help/help2-icon.svg" %} Different locations</li>
+                <li>{% include "icons/help/help3-icon.svg" %} Working Intervals</li>
+            </ul>
+        {% endif %}
+    </div>
+
+</div>

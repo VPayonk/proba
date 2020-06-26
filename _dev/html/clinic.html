@@ -11,6 +11,103 @@
 
 
 {% block main_content %}
+    {% set section_care_data = {
+        img: 'img/care/care-bg1.jpg'
+    } %}
+    {% include "sections/_section-care.html" %}
+
+    <div class="section section-help">
+        <div class="container">
+            <h2>How Shall We Help You?</h2>
+            <p>Ademrius is global, comprehensive, but still simle SaaS solution for healthcare professionals. </p>
+
+            {% set section_help_data = {
+                items: [
+                    {
+                        title: 'Save some time',
+                        text: 'Patients overload, constant lack of time, and shifts overlap locks your doctors down in a
+                            vicious circle of time bad estimation? Start with Ademrius smart scheduling and automated reminders
+                            system to stay on track without extra efforts.',
+                        list: 'true',
+                        class: 'section-help__item--left',
+                        img: 'img/help/help4.png'
+                    },
+                    {
+                        title: 'Save some patience',
+                        text: "Do your patients walk an extra mile to make an appointment with a doctor? Does the registry
+                            person get lost in tones of booking notes? Try simple, intuitive, 24/7 appointments booking for
+                            your patients and employees.  Automated appointment reminders will handle patient's no shows.",
+                        class: '',
+                        img: 'img/help/help2.png'
+                    },
+                    {
+                        title: 'Save some paper',
+                        text: "No more lost medical cards, records or screening results. No more mess in patient's history
+                            or even illegible handwriting.  Patient data in your fingertips any time, from anywhere. ",
+                        class: 'section-help__item--left',
+                        img: 'img/help/help3.png'
+                    },
+                    {
+                        title: 'Skip some fuss',
+                        text: "Chat with your patients or make the video call. Help them as seamless as possible, saving
+                            their time and efforts. And we'll take care to make your online consultation secure. Benefit
+                            from cutting edge technologies to gear up your practice.",
+                        class: '',
+                        img: 'img/help/help2.png'
+                    },
+                    {
+                        title: 'Take care of your family',
+                        text: 'We help doctors to take care of your health. And we help you to take good care of your
+                            kids or digitally illiterate elderly relatives with Ademrius shared and connected profiles. We
+                            created the perfect storage and management system for your medical data from diverse channels to
+                            keep them relevant and updated. ',
+                        class: 'section-help__item--left',
+                        img: 'img/help/help1.png'
+                    }
+                ]
+            }%}
+            {% for item in section_help_data.items %}
+            {% include "layout/block/_help-item.html" %}
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% set section_free_data = {
+        class: 'section-free--bg',
+        title: 'One more healthcare platform or out of the box healthcare solution?',
+        description: "How do we match the system & the doctors every day needs?
+            Why we create healthcare providers' ecosystem?
+            How international solution blures the healthcare boundaries?
+            How we'll streamline your clinic or practice?
+            and many more.",
+        small_text: '',
+        buttons: [
+            {
+                title: 'Find more',
+                class: ''
+            }
+        ]
+    } %}
+    {% include "sections/_section-free.html" %}
+    {% include "sections/_section-keeps-data.html" %}
+
+
+
+    {% set section_free_data = {
+        class: '',
+        title: 'Join Healthcare Professionals Openspace',
+        description: "Manage and grow your clinic, all in one place.",
+        small_text: '30-day trial, no credit card ',
+        buttons: [
+            {
+                title: 'Start free trial',
+                class: ''
+            }
+        ]
+    } %}
+    {% include "sections/_section-free.html" %}
+
 <!--    {% include "sections/_section-preview.html" %}-->
 <!--    {% include "sections/_section-consultation.html" %}-->
 <!--    {% include "sections/_section-clinic.html" %}-->

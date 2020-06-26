@@ -1,26 +1,15 @@
-<section class="section section-free">
+<section class="section section-free {% if section_free_data.class %}{{ section_free_data.class }}{% endif %}">
     <div class="container">
-        <h2>Use For Free Forever</h2>
+        <h2>{{ section_free_data.title }}</h2>
 
-        <p>Best time to take care of your health. More so it's so simple now.</p>
+        <p>{{ section_free_data.description}}</p>
         <div class="link-group">
-            <a href="">Book an appointment</a>
-            <a class="border" href="">Sign up</a>
-
+            {% for btn in section_free_data.buttons %}
+                <a href="#" class="{% if btn.class %}{{ btn.class }}{% endif %}">{{btn.title}}</a>
+            {% endfor %}
         </div>
+        {% if section_free_data.small_text %}
+             <p class="small-txt">{{ section_free_data.small_text}}</p>
+        {% endif %}
     </div>
-    <div class="container mobile">
-        <h2>Join Healthcare Professionals Openspace</h2>
-
-        <p>Manage and grow your practice, all in one place.</p>
-        <div class="link-group">
-            <a href="">Start free trial</a>
-        </div>
-
-        <p class="small-txt">30-day trial, no credit card </p>
-    </div>
-
-
-
-
 </section>

@@ -1,0 +1,37 @@
+.section-care {
+    position: relative;
+    padding: 50px 0 100px;
+
+    @media (min-width: $bp-lp) {
+        padding: 50px 0 105px;
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        max-width: 640px;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    h2 {
+        margin-bottom: 13px;
+
+        @media (min-width: $bp-tb) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    h2+p {
+        @media (min-width: $bp-tb) {
+            margin: 0 auto 60px;
+            text-align: center;
+            max-width: 500px;
+        }
+    }
+
+
+}
