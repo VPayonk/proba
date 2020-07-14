@@ -1,5 +1,4 @@
 <div class="section section-care">
-    <img class="section-care__img" src="{{section_care_data.img}}" alt="">
     <div class="container">
         <div class="logo">
             {% include "icons/logo.svg" %}
@@ -7,11 +6,27 @@
         <h1>
             Make More Care
         </h1>
-        <p>Take care of your doctors for they could share care with patients.</p>
+        <p>{{section_care_data.text}}</p>
+        
+        <ul class="section-care__list">
+            <li>
+                <img src="img/care/care-list1.png" alt="">
+                Save doctors from exhausting routine
+            </li>
+            <li>
+                <img src="img/care/care-list2.png" alt="">
+                Fit patients lifestyle
+            </li>
+            <li>
+                <img src="img/care/care-list3.png" alt="">
+                Stay focused with one-stop shop healthcare solution
+            </li>
+        </ul>
 
         <div class="link-group">
             <a href="" class="m0">Start free trial</a>
         </div>
         <p class="small-txt">30-day trial, no credit card </p>
     </div>
+    <img class="section-care__img" src="{{section_care_data.img}}" alt="">
 </div>

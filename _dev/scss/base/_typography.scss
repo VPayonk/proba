@@ -21,7 +21,7 @@ h1, .h--1 {
     font-size: em(32px);
     line-height: 1.5;
 
-    @media (min-width: $bp-lp) {
+    @media (min-width: $bp-lg) {
         font-size: em(72px);
         line-height: 1.1;
     }
