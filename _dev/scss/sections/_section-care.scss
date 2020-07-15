@@ -13,9 +13,9 @@
         object-fit: cover;
         width: 100%;
 
-        @media (min-width: $bp-tb) {
-            height: 40vh;
-        }
+        //@media (min-width: $bp-tb) {
+        //    height: 40vh;
+        //}
 
         @media (min-width: $bp-lp) {
             position: absolute;

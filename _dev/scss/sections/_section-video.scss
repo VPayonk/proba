@@ -1,0 +1,101 @@
+.section-video {
+    padding-top: 50px;
+
+    @media (min-width: $bp-lp) {
+        padding-top: 80px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2+p {
+        display: block;
+        max-width: 350px;
+        text-align: center;
+        margin: 0 auto 40px;
+    }
+
+    .block-wrapp {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 55px;
+
+        .block {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: color(black);
+            padding: 15px 20px;
+            margin: 0 15px;
+            border: 1px solid;
+            border-radius: 10px;
+            background: color(white);
+
+            svg {
+                margin-right: 10px;
+            }
+
+            &--orange {
+                border-color: color(orange);
+            }
+
+            &--blue {
+                border-color: #67C9D3;
+            }
+
+            &--yellow {
+                border-color: #FCD06C;
+            }
+        }
+    }
+
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 880px;
+        height: 450px;
+        margin: 0 auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background: url("../img/video-bg.jpg") center no-repeat;
+        background-size: cover;
+
+        .play-btn {
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 1.25;
+            padding: 14px 20px;
+            color: color(white);
+            background-color: color(orange);
+            border: 2px solid color(orange);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+            &:hover {
+                color: color(orange);
+                background-color: color(white);
+
+                svg {
+                    path {
+                        fill: color(orange);
+                    }
+                }
+            }
+
+            svg {
+                margin-left: 15px;
+
+                path {
+                    transition: fill .3s ease-in-out;
+                }
+            }
+        }
+    }
+
+
+}
