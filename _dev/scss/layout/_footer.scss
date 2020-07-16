@@ -46,9 +46,8 @@
         }
 
         div.flex {
-            width: 100%;
-
             @media (max-width: $bp-tb - 1) {
+                width: 100%;
                 flex-direction: column;
             }
         }

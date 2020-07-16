@@ -4,15 +4,25 @@
     @media (min-width: $bp-lp) {
         padding-top: 80px;
     }
+
     .bg {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
-        height: 500px;
+        height: 1480px;
         background: url("../img/trial-bg.jpg") center no-repeat;
         background-size: cover;
+
+        @media (min-width: $bp-tb) {
+            height: 1580px;
+        }
+
+        @media (min-width: $bp-lp) {
+            height: 990px;
+        }
     }
+
     h2 {
         color: color(white);
         text-align: center;
@@ -27,46 +37,105 @@
 
     &__info {
         display: flex;
+        flex-direction: column;
         background: color(white);
         box-shadow: 0 0 3px rgba(31, 37, 45, 0.02), 0 0 16px rgba(58, 21, 71, 0.1);
         border-radius: 10px;
         overflow: hidden;
         margin-bottom: 30px;
 
+        @media (min-width: $bp-lp) {
+            flex-direction: row;
+        }
+
         .bg-block {
             background: url("../img/trial-bg1.jpg");
         }
 
         &>div:first-of-type {
-            width: 50%;
-            max-width: 490px;
+            min-width: 50%;
+
+            @media (min-width: $bp-cont) {
+                width: 50%;
+                min-width: auto;
+                max-width: 510px;
+            }
         }
 
         &>div {
             position: relative;
-            padding: 50px 70px 50px 50px;
+            padding: 40px 30px;
+
+            @media (min-width: $bp-lg) {
+                padding: 50px;
+            }
+
+            &.pl {
+                padding-bottom: 20px;
+
+                @media (min-width: $bp-lg) {
+                    padding-bottom: inherit;
+                    padding-left: 100px;
+                }
+            }
+
+            &.pt {
+                padding-top: 20px;
+
+                @media (min-width: $bp-lp) {
+                    padding-top: 140px;
+                }
+            }
+
+            &>p {
+                font-size: 19px;
+            }
         }
 
         h2 {
-            font-size: 45px;
+            font-size: 27px;
             line-height: 1.5;
             text-align: left;
+
+            @media (min-width: $bp-tb) {
+                font-size: 45px;
+            }
+        }
+
+        h3 {
+            margin-bottom: 50px;
         }
 
         .price-block {
-            position: absolute;
-            right: 36px;
-            bottom: 0;
-            max-width: 215px;
+            float: right;
+            max-width: 145px;
+            @media (min-width: $bp-tb) {
+                max-width: 215px;
+            }
+
+            @media (min-width: $bp-lp) {
+                position: absolute;
+                right: 36px;
+                bottom: 0;
+                margin-bottom: 25px;
+            }
+
 
             p {
                 font-weight: bold;
-                font-size: 19px;
+                font-size: 13px;
                 line-height: 1.5;
 
-                .price {
-                    font-size: 72px;
+                @media (min-width: $bp-tb) {
+                    font-size: 19px;
+                }
 
+                .price {
+                    font-size: 51px;
+
+                    @media (min-width: $bp-tb) {
+                        font-size: 72px;
+                    }
                 }
             }
         }
@@ -74,7 +143,7 @@
     }
 
     &__list {
-        margin: 0;
+        margin: 20px 0 0;
         padding: 0;
 
         li {
@@ -85,9 +154,8 @@
             &:before {
                 position: absolute;
                 content: '';
-                top: 50%;
+                top: 0;
                 left: 0;
-                transform: translateY(-50%);
                 width: 24px;
                 height: 24px;
                 background: url("../img/marker.png") center no-repeat;
@@ -103,4 +171,46 @@
             margin: 0;
         }
     }
+}
+
+.price-list {
+    li {
+        display: flex;
+        align-items: start;
+        margin-bottom: 50px;
+
+        @media (min-width: $bp-tb) {
+            margin-bottom: 70px;
+        }
+
+            &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        img {
+            margin-right: 30px;
+
+            @media (min-width: $bp-tb) {
+                margin-right: 60px;
+            }
+        }
+
+        &>div {
+            display: inline-flex;
+            flex-direction: column;
+
+            .price {
+                font-size: 19px;
+                color: color(text_grey);
+                margin-bottom: 10px;
+
+                span {
+                    font-size: 32px;
+                    color: color(dark);
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
 }

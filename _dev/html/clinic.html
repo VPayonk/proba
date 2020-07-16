@@ -13,7 +13,8 @@
 {% block main_content %}
     {% set section_care_data = {
         img: 'img/care/care-bg1.jpg',
-        text: 'Take care of your doctors for they could share care with patients.'
+        text: 'Take care of your doctors for they could share care with patients.',
+        li: 'Save doctors from exhausting routine'
     } %}
     {% include "sections/_section-care.html" %}
 
@@ -99,7 +100,7 @@
 
 
     {% set section_free_data = {
-        class: '',
+        class: 'section-free--small',
         title: 'Join Healthcare Professionals Openspace',
         description: "Manage and grow your clinic, all in one place.",
         small_text: '30-day trial, no credit card ',
