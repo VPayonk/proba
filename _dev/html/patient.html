@@ -1,0 +1,99 @@
+{% extends "_tpl.html" %}
+
+{% set page = {
+    'title': 'For Patient',
+    'body_class': 'patient-page'
+} %}
+
+{% block head %}
+    <link rel="stylesheet" href="css/plagins/foopicker.css">
+    <link rel="stylesheet" href="css/patient.css">
+{% endblock %}
+
+
+{% block main_content %}
+    {% include "sections/_section-preview.html" %}
+    {% include "sections/_section-consultation.html" %}
+    {% include "sections/_section-clinic.html" %}
+    {% include "sections/_section-request.html" %}
+
+    <div class="section section-help">
+        <div class="container">
+            <h2>How Shall We Help You?</h2>
+            <p>Ademrius is global, comprehensive, but still simle SaaS solution for healthcare professionals. </p>
+
+            {% set section_help_data = {
+                items: [
+                    {
+                        title: 'Take care of your family',
+                        text: 'We help doctors to take care of your health. And we help you to take good care of your
+                            kids or digitally illiterate elderly relatives with Ademrius shared and connected profiles. We
+                            created the perfect storage and management system for your medical data from diverse channels to
+                            keep them relevant and updated. ',
+                        class: '',
+                        img: 'img/help/help1.png'
+                    },
+                    {
+                        title: 'Keep you from frustrations',
+                        text: 'Do you walk the extra mile to make an appointment with a doctor? Try simple, intuitive,
+                            24/7 appointments booking platform.  Automated appointment reminders will help you never to
+                            forget of appointment. ',
+                        class: 'section-help__item--left',
+                        img: 'img/help/help2.png'
+                    },
+                    {
+                        title: 'Keep you well organized',
+                        text: "Lost in all these doctors' records? Have no idea how to organize them. We'll handle all
+                            this mess. You'll always have all the needed data at hand with our app and won't be caught
+                            by surprise anymore.",
+                        class: '',
+                        img: 'img/help/help3.png'
+                    }
+                ]
+                }
+            %}
+            {% for item in section_help_data.items %}
+                {% include "layout/block/_help-item.html" %}
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% include "sections/_section-keeps-data.html" %}
+
+    {% set section_free_data = {
+        class: 'section-free--bg',
+        title: 'Use For Free Forever',
+        description: "Best time to take care of your health. More so it's so simple now.",
+        small_text: '',
+        buttons: [
+            {
+                title: 'Book an appointment',
+                class: ''
+            },
+            {
+                title: 'Sign up',
+                class: 'border'
+            }
+        ]
+    } %}
+    {% include "sections/_section-free.html" %}
+
+
+<!--    {% include "sections/_section-preview.html" %}-->
+
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="../js/plagins/foopicker.js"></script>
+    <script src="../js/js.min.js"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
